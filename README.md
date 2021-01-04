@@ -1,7 +1,7 @@
 NightShiftEnabler
 =================
 
-A [Lilu](https://github.com/acidanthera/Lilu) plugin for enabling Night Shift on unsupported Mac models. The plugin is compatible with Lilu 1.4.0 or later and macOS Sierra 10.12.4 or later.
+A [Lilu](https://github.com/acidanthera/Lilu) plugin for enabling Night Shift on unsupported Mac models. The plugin is compatible with Lilu 1.4.0 or later and macOS Sierra 10.12.4 to Catalina 10.15.7.
 
 #### Historical Note
 
