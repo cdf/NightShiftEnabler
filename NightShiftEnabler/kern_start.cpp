@@ -2,7 +2,7 @@
 //  kern_start.cpp
 //  NSE
 //
-//  Copyright © 2020 cdf. All rights reserved.
+//  Copyright © 2021 cdf. All rights reserved.
 //
 
 #include <Headers/plugin_start.hpp>
@@ -29,14 +29,14 @@ PluginConfiguration ADDPR(config) {
     parseModuleVersion(xStringify(MODULE_VERSION)),
     LiluAPI::AllowNormal,
     bootargOff,
-    1,
+    arrsize(bootargOff),
     bootargDebug,
-    1,
+    arrsize(bootargDebug),
     bootargBeta,
-    1,
+    arrsize(bootargBeta),
     KernelVersion::Sierra,
     KernelVersion::BigSur,
     []() {
-       nse.init();
+        nse.init();
     }
 };
