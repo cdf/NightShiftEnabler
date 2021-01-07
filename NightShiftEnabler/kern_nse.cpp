@@ -65,7 +65,6 @@ void NSE::csValidatePage(vnode *vp, memory_object_t pager, memory_object_offset_
 }
 
 void NSE::processKernel(KernelPatcher &patcher) {
-    
     DBGLOG("nse", "activating");
     
     if (getKernelVersion() >= KernelVersion::BigSur) {
