@@ -29,14 +29,24 @@ private:
     static NSE *callbackNSE;
     
     /**
-     *  Codesign page validation wrapper used for userspace patching
+     *  Function for patching _ModelMinVersionBLR
+     */
+    static void PatchModelMinVersionBLR(const void *data, size_t size, const char (&path)[PATH_MAX]);
+    
+    /**
+     *  Codesign page validation wrapper used for userspace patching for pre-Big Sur systems
+     */
+    static void csValidateRange(vnode *vp, memory_object_t pager, memory_object_offset_t page_offset, const void *data, vm_size_t size, unsigned *result);
+    
+    /**
+     *  Codesign page validation wrapper used for userspace patching for Big Sur systems
      */
     static void csValidatePage(vnode *vp, memory_object_t pager, memory_object_offset_t page_offset, const void *data, int *validated_p, int *tainted_p, int *nx_p);
 
     /**
-     * Original codesign page validation pointer
+     * Original codesign page or range validation pointer
      */
-    mach_vm_address_t orgCsValidatePage {0};
+    mach_vm_address_t orgCsValidate {0};
     
     /**
      *  Current shared cache
