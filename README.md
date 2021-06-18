@@ -15,4 +15,4 @@ The current version uses a [patch](https://pikeralpha.wordpress.com/2017/01/30/4
 
 - `-nsedbg` enables debug printing (available in DEBUG binaries)
 - `-nseoff` disables the plugin
-- `-nsebeta` enables the plugin on macOS versions newer than Catalina
+- `-nsebeta` enables the plugin on macOS versions newer than Big Sur
