@@ -35,7 +35,6 @@
 		0F848D9823FC6A7E00FEC38C /* kern_nse.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = kern_nse.cpp; sourceTree = "<group>"; };
 		0F848D9923FC6A7E00FEC38C /* kern_nse.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = kern_nse.hpp; sourceTree = "<group>"; };
 		0FB70CFB2145D1E8005BD386 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0FDD21662718E61B0081A2E7 /* libkmod.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libkmod.a; path = ../Lilu/MacKernelSDK/Library/x86_64/libkmod.a; sourceTree = SDKROOT; };
 		1C748C271C21952C0024EED2 /* NightShiftEnabler.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NightShiftEnabler.kext; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C748C2C1C21952C0024EED2 /* kern_start.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = kern_start.cpp; sourceTree = "<group>"; };
 		CE405EBA1E49DD7100AA0B3D /* kern_compression.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = kern_compression.hpp; sourceTree = "<group>"; };
@@ -68,7 +67,6 @@
 		0FDD21652718E61B0081A2E7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0FDD21662718E61B0081A2E7 /* libkmod.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -161,7 +159,6 @@
 			buildConfigurationList = 1C748C311C21952C0024EED2 /* Build configuration list for PBXNativeTarget "NightShiftEnabler" */;
 			buildPhases = (
 				1C748C221C21952C0024EED2 /* Sources */,
-				1C748C231C21952C0024EED2 /* Frameworks */,
 				1C748C241C21952C0024EED2 /* Headers */,
 				1C748C251C21952C0024EED2 /* Resources */,
 				1C642F521C8F157A006B4C51 /* CopyFiles */,
