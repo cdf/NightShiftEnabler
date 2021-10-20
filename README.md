@@ -15,11 +15,11 @@ The current version uses a [patch](https://pikeralpha.wordpress.com/2017/01/30/4
 
 - `-nsedbg` enables debug printing (available in DEBUG binaries)
 - `-nseoff` disables the plugin
-- `-nsebeta` enables the plugin on macOS versions newer than Big Sur
+- `-nsebeta` enables the plugin on macOS versions newer than Monterey
 
 #### Credits
 
 - [Apple](https://www.apple.com) for macOS  
 - [vit9696](https://github.com/vit9696) for [Lilu](https://github.com/vit9696/Lilu) and [WhateverGreen](https://github.com/acidanthera/WhateverGreen)
+- [Pike R. Alpha](https://github.com/Piker-Alpha) for the Night Shift [patch](https://pikeralpha.wordpress.com/2017/01/30/4398/)
 - [osy](https://github.com/osy) for [Polaris22Fixup](https://github.com/osy/Polaris22Fixup)
- 
