@@ -35,7 +35,7 @@ PluginConfiguration ADDPR(config) {
     bootargBeta,
     arrsize(bootargBeta),
     KernelVersion::Sierra,
-    KernelVersion::BigSur,
+    KernelVersion::Monterey,
     []() {
         nse.init();
     }

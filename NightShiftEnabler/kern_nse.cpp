@@ -17,20 +17,15 @@ void NSE::init() {
     if (getKernelVersion() == KernelVersion::Sierra && getKernelMinorVersion() < 4)
         return;
     
-    sharedCachePath = UserPatcher::getSharedCachePath();
-    
-    DBGLOG("nse", "chosen shared cache path is %s", sharedCachePath);
-    
     lilu.onPatcherLoadForce([](void *user, KernelPatcher &patcher) {
             static_cast<NSE *>(user)->processKernel(patcher);
         }, this);
 }
 
 void NSE::PatchModelMinVersionBLR(const void *data, size_t size, const char (&path)[PATH_MAX]) {
-    if (UNLIKELY(strcmp(path, "/System/Library/PrivateFrameworks/CoreBrightness.framework/Versions/A/CoreBrightness") == 0) ||
-        UNLIKELY(strcmp(path, callbackNSE->sharedCachePath) == 0)) {
+    if (UserPatcher::matchSharedCachePath(path)) {
         
-        if (getKernelVersion() >= KernelVersion::HighSierra && getKernelMinorVersion() >= 2) {
+        if ((getKernelVersion() == KernelVersion::HighSierra && getKernelMinorVersion() >= 2) || getKernelVersion() >= KernelVersion::Mojave) {
             static const uint8_t find[28] = {
                 0x09, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x0D, 0x00, 0x00, 0x00, 0x06, 0x00, 0x00, 0x00,
                 0x05, 0x00, 0x00, 0x00, 0x06, 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x00
